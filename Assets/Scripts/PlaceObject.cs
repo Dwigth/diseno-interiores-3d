@@ -1,11 +1,22 @@
-﻿using System.Collections;
+﻿/*
+* La idea general de poder mover un objeto es que al momento de hacerle un click
+* este pueda visualizar las opciones en las cuales pueda moverse, poder acercarse a la
+* opción y dar un click para poder mover el objeto. Tambien poder cancelar la acción.
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlaceObject : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public enum Tipo
+    {
+        Estructural,
+        Decorativo,
+        Mueble
+    }
     public Transform m_container;
+    public Tipo m_type;
     public List<Transform> m_places;
     public bool m_placing = false;
     public Transform m_currentTarget;
