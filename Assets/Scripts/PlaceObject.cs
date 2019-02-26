@@ -26,7 +26,7 @@ public class PlaceObject : MonoBehaviour
         m_container = GameObject.Find("container").GetComponent<Transform>();
         m_places.AddRange(m_container.GetComponentsInChildren<Transform>());
         m_places.Remove(m_places[0]);
-        showPlacer(false);
+        // showPlacer(false);
     }
 
     // Update is called once per frame
